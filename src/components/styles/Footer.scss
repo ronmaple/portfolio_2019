@@ -1,0 +1,116 @@
+@import 'src/variables.scss';
+
+.footer {
+    grid-area: 3/1/4/3;
+    // background-image: $reverse-blue-gradient;
+
+    background-color: $secondary-blue;
+
+    @include phone {
+
+    }
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        height: 225px;
+
+        .footer_image {
+            // border: solid 2px red;
+
+            img {
+                height: 150px;
+                margin-top: 25px;
+                border-radius: 50%;
+                box-shadow: $primary-shadow;
+            }
+        }
+        .footer_body {
+        //    border: solid 2px blue; 
+            text-align: center;
+            // border: solid 2px red;
+
+            .footer_body__description {
+                padding: 3.0em 1.5em;
+
+                h5 {
+                    font-family: $jura;
+                    font-size: 1.2em;
+                }
+
+            }
+            .footer_body__link {
+
+                img {
+                    height: 40px;
+                    width: auto;
+                    margin: 1.0em 1.5em 0.0em 1.5em;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+
+    }
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        height: 300px;
+
+        .footer_image {
+            // border: solid 2px red;
+
+            img {
+                height: 200px;
+                margin-top: 50px;
+                border-radius: 50%;
+                
+                border: solid 0.90em $tertiary-gray;
+            }
+        }
+        .footer_body {
+        //    border: solid 2px blue; 
+            text-align: center;
+            // border: solid 2px red;
+
+            .footer_body__description {
+                padding: 3.0em 1.5em;
+
+                h5 {
+                    font-family: $jura;
+                    font-size: 2.0em;
+                }
+
+            }
+            .footer_body__link {
+
+                img {
+                    height: 50px;
+                    width: auto;
+                    margin: 2.0em 3.0em 0.0em 3.0em;
+                    border-radius: 50%;
+                    // border: solid 0.1em #fff;
+                    box-shadow: $primary-shadow;
+                }
+            }
+
+        }
+
+    }
+
+
+    * {
+      font-family: $roboto;
+      color: #fff;
+      text-shadow: 1px 1px 0 #444;
+    }
+
+
+
+    /** end of .footer phone query **/
+
+
+  }

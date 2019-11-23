@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Enriqueta|Jura&display=swap');
+
+/* new variables */
+$backgroundColor: hsl(0, 0%, 98%);
+$titleGray: hsl(0,0,90%);
+$primary-blue: hsl(221, 61%, 45%);
+$secondary-blue: hsl(221, 100%, 65%);
+$tertiary-blue: hsl(221, 100%, 90%);
+
+$quartBlue: hsl(221,100%, 96%);
+
+
+/* Legacy variables. Change and delete as you go */
+
+
+$blue-gradient: linear-gradient($secondary-blue, $tertiary-blue);
+$reverse-blue-gradient: linear-gradient($tertiary-blue, $primary-blue);
+
+$gradientDev: linear-gradient($backgroundColor, $tertiary-blue);
+$primary-gray: hsl(0, 0, 35%);
+$secondary-gray: hsl(0, 0, 55%);
+$tertiary-gray: hsl(0,0,75%);
+$quarternary-gray: hsl(0,0,90%);
+
+$primary-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,.24);
+
+$primary-radius: 2.5px;
+
+$roboto: 'Roboto', sans-serif;
+$jura: 'Jura', sans-serif;
+
+/** new variables dependent on legacy variables **/
+
+$hrBorder: solid 0.1em $secondary-blue;
+
+@mixin phone {
+    @media screen and (min-width: 320px) and (max-width: 767px){
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }

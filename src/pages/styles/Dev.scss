@@ -1,0 +1,129 @@
+@import 'src/variables.scss';
+
+/** Start of .main .home page **/
+.dev {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    margin: auto;
+
+    .dev_main {
+        grid-area: 1/1/2/3;
+        justify-self: center;
+        text-align: center;
+        margin: auto;
+        
+        h1 {
+            @include phone {font-size: 2.5em;}
+            @include tablet {font-size: 3.5em;}
+            @include desktop {font-size: 5.0em;}
+            color: $primary-gray;
+            font-family: $jura;
+        }
+        p {
+            @include phone {font-size: 1em;}
+            @include tablet {font-size: 1em;}
+            @include desktop {font-size: 1em;}
+            color: $primary-blue;
+            font-family: $roboto;
+        }
+
+        @include phone {
+            background-image: linear-gradient($backgroundColor, $tertiary-blue);
+            padding: 2.5em 2.5em;
+            height: 40vh;
+            border-radius: 15px;
+        }
+        
+        @include tablet {
+            background-image: linear-gradient($backgroundColor, $quartBlue);
+            width: 100%;
+            height: 50vh;
+            top: 50%;
+            border-radius: 20px;
+            margin-top: 10vh;
+        }
+
+        @include desktop {
+            background-image: linear-gradient($backgroundColor, $quartBlue);
+            width: 100%;
+            height: 500px;
+            top: 50%;
+            border-radius: 20px;
+            margin-top: 20vh;            
+        }
+    }
+
+    .dev_content {
+        padding: 2.0em 0em;
+        grid-area: 3/1/4/3;
+        width: 100%;
+        border-radius: 15px;
+
+        * {
+            font-family: $jura;
+        }
+
+        hr {
+            border: $hrBorder;
+            box-shadow: $primary-shadow;
+            @include phone { width: 90%; }
+            @include tablet { width: 75%; }
+            @include desktop {width: 75%; }
+        }
+
+
+        .dev_cards {
+            @include phone {
+                padding: 2.0em 0em;
+
+                .dev_cards_card {
+                    padding: 2.0em 0em;
+                }
+            }
+
+            @include tablet {
+                display: grid;
+                grid-template-columns: auto-fill auto-fill;
+                grid-template-rows: repeat(3, auto);
+                padding: 3.0em 0em;
+                grid-gap: 0.5em;
+
+                .dev_cards_card {
+                    padding: 1.25em 0em;
+                }
+            }
+
+            @include desktop {
+                display: grid;
+                grid-template-columns: auto-fill auto-fill;
+                grid-template-rows: repeat(3, auto);
+                padding: 3.0em 0em;
+                grid-gap: 0.1em;
+                margin-top: 2.0em;
+
+                .dev_cards_card {
+                    padding: 1.25em 0em;
+                }
+            }
+        }
+
+        .dev_title {
+            margin: 1.0em 0em;
+            text-align: center;
+            border-radius: 5px;
+            padding: 0.75em 0.25em;
+            color: $primary-gray;
+
+            h1 {
+                @include phone {font-size: 2.5em;}
+                @include tablet {font-size: 3.5em;}
+                @include desktop {font-size: 4.5em;}
+                font-weight: 1000;
+                text-shadow: 0.01em 0.01em white;
+            }
+
+        }
+
+    }
+} 

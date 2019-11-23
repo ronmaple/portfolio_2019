@@ -1,0 +1,118 @@
+@import 'src/variables.scss';
+
+
+.item_card {
+    box-shadow: $primary-shadow;
+    padding: 0.1em 0.05em;
+    margin: 0.75em auto;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    height: 75%;
+    border-radius: 10%;
+
+    @include phone { width: 85%; }
+    @include tablet { width: 80%; }
+    @include desktop {width: 75%; }
+
+    position: static;
+    border-radius: 0.5em;
+    transition: background 0.8s;
+
+    hr {
+        border: solid 0.1em #fff;
+    }
+
+    .item_card_image {
+        @include phone {
+            text-align: center;
+            height: 200px;
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        @include tablet {
+            text-align: center;
+            height: 300px;
+            width: auto;
+            padding: 1.0em 0.5em;
+            overflow: hidden;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        @include desktop {
+            text-align: center;
+            height: 500px;
+            width: auto;
+            padding: 1.5em 1.5em;
+            overflow: hidden;
+
+            img {
+                margin: auto;
+                height: auto;
+                width: 100%;
+            }
+        }
+
+    }
+    
+    .item_card_description {
+        background-image: linear-gradient(hsl(0,0,95%), hsl(0,0,98%));
+        padding: 0.25em 0.5em;
+        height: 125px;
+        overflow: hidden;
+
+        .item_card_description__title, .item_card_description__body {
+            // margin: 2.0em 0em;
+            margin: auto;
+        }
+
+        .item_card_description__title {
+            @include phone { text-align: center; padding: 0.5em; }
+            @include tablet { text-align: left; padding: 0.75em; }
+            @include desktop { text-align: left; padding: 0.75em; }
+
+            h4 {
+                @include phone {font-size: 1.5em;}
+                @include tablet {font-size: 2.25em;}
+                @include desktop {font-size: 2.75em;}
+                font-weight: 1000;
+            }
+        }
+
+        .item_card_description__body {
+
+            text-align: left;
+            p{
+                @include phone {font-size: 1.0em; padding: 0.5em;}
+                @include tablet {font-size: 1.5em; padding: 0.75em;}
+                @include desktop {font-size: 1.75em; padding: 0.75em;}
+            }
+        }
+    }
+}
+@include tablet {
+    .item_card:hover {
+        background: #fff radial-gradient(circle, transparent 1%, $quartBlue 1%) center/15000%;
+    }
+    .item_card:active{
+        background-color: #fff;
+        background-size: 100%;
+        transition: background 0s;
+    }
+}
+
+@include desktop {
+    .item_card {
+        transition: all .3s ease-in-out;
+    }
+    .item_card:hover {
+        transform: scale(1.01);
+        // background-color:red;
+    }
+}
