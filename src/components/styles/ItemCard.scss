@@ -25,10 +25,13 @@
     .item_card_image {
         @include phone {
             text-align: center;
-            height: 200px;
+            height: 150px;
+            overflow: hidden;
+            padding: 0.5em;
+
             img {
-                height: 100%;
-                width: auto;
+                height: auto;
+                width: 100%;
             }
         }
 
@@ -64,8 +67,20 @@
     .item_card_description {
         background-image: linear-gradient(hsl(0,0,95%), hsl(0,0,98%));
         padding: 0.25em 0.5em;
-        height: 125px;
+        // height: 125px;
         overflow: hidden;
+
+        @include phone {
+            height: 100px;
+        }
+
+        @include tablet {
+            height: 125px;
+        }
+
+        @include desktop {
+            height: 125px;
+        }
 
         .item_card_description__title, .item_card_description__body {
             // margin: 2.0em 0em;
