@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Enriqueta|Jura&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap');
+
+/* new font 2019-11-23 */
+
+$rubik-bold: 'Rubik', sans-serif;
 
 /* new variables */
-$backgroundColor: hsl(0, 0%, 98%);
+// $backgroundColor: hsl(0, 0%, 97%);
+$backgroundColor: hsl(29, 100%, 98%);
 $titleGray: hsl(0,0,90%);
 $primary-blue: hsl(221, 61%, 45%);
 $secondary-blue: hsl(221, 100%, 65%);

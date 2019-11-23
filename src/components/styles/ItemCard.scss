@@ -1,5 +1,10 @@
 @import 'src/variables.scss';
 
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700,900&display=swap');
+
+$black: #17141d;
+
+$rubik-bold: 'Rubik', sans-serif;
 
 .item_card {
     box-shadow: $primary-shadow;
@@ -9,6 +14,8 @@
     transition: all .2s ease-in-out;
     height: 75%;
     border-radius: 10%;
+    // background-color: $black;
+    background-color: white;
 
     @include phone { width: 85%; }
     @include tablet { width: 80%; }
@@ -21,6 +28,11 @@
     hr {
         border: solid 0.1em #fff;
     }
+
+    // h1,h2,h3, p {
+    //     font-family: $rubik-bold;
+    // }
+
 
     .item_card_image {
         @include phone {
@@ -65,8 +77,8 @@
     }
     
     .item_card_description {
-        background-image: linear-gradient(hsl(0,0,95%), hsl(0,0,98%));
-        padding: 0.25em 0.5em;
+        // background-image: linear-gradient(hsl(0,0,95%), hsl(0,0,98%));
+        padding: 0.75em 0.5em;
         // height: 125px;
         overflow: hidden;
 
@@ -96,7 +108,9 @@
                 @include phone {font-size: 1.5em;}
                 @include tablet {font-size: 2.25em;}
                 @include desktop {font-size: 2.75em;}
-                font-weight: 1000;
+                font-family: $rubik-bold;
+                font-weight: bold;
+                color: #17141d;
             }
         }
 
@@ -107,6 +121,7 @@
                 @include phone {font-size: 1.0em; padding: 0.5em;}
                 @include tablet {font-size: 1.5em; padding: 0.75em;}
                 @include desktop {font-size: 1.75em; padding: 0.75em;}
+                font-family: $rubik-bold;
             }
         }
     }
@@ -127,7 +142,7 @@
         transition: all .3s ease-in-out;
     }
     .item_card:hover {
-        transform: scale(1.01);
+        transform: scale(1.005);
         // background-color:red;
     }
 }

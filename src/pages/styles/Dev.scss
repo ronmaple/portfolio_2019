@@ -1,5 +1,6 @@
 @import 'src/variables.scss';
 
+
 /** Start of .main .home page **/
 .dev {
     display: grid;
@@ -18,7 +19,7 @@
             @include tablet {font-size: 3.5em;}
             @include desktop {font-size: 5.0em;}
             color: $primary-gray;
-            font-family: $jura;
+            font-family: $rubik-bold;
         }
         p {
             @include phone {font-size: 1em;}
@@ -61,7 +62,7 @@
         border-radius: 15px;
 
         * {
-            font-family: $jura;
+            font-family: $rubik-bold;
         }
 
         hr {

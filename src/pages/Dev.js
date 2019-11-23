@@ -18,7 +18,7 @@ export default class Dev extends Component {
 
         const pHAdjuster = { 
             src: "https://s3-us-west-2.amazonaws.com/placeholders.ronmapue.com/codepen_placeholders/pH_Adjuster.png",
-            description: "Built using 2011 Javascript, and Bootstrap 4 with Google App Script server-side and Google Sheets as back-end. Calculates chemicals required to adjust product pH, and collects data to be used for statistical analysis in Google Sheets.",
+            description: "Built using 2011 Javascript, and Bootstrap 4 with Google App Script. Calculates chemicals required to adjust product pH, and collects data for statistical analysis.",
             title: "pH Adjuster - calculation and data collection"
         };
 
